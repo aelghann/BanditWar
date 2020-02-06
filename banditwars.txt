@@ -1,0 +1,337 @@
+bandit3  -> bandit4: UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+
+cat \.hidden
+
+
+bandit4  -> bandit5: pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+
+file `find ./*`
+cat ./-file07
+
+bandit5  -> bandit6: koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+
+cat `find . -type f -readable \! -executable -size 1033c`
+
+DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+
+
+bandit6  -> bandit7: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+
+find . -user bandit7 -group bandit6 -size 33c
+cat ./var/lib/dpkg/info/bandit7.password
+
+bandit7  -> bandit8: cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+
+grep millionth data.txt OR  strings data.txt | uniq -u |  grep millionth
+
+
+bandit8  -> bandit9: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+
+sort data.txt| uniq -c
+
+
+bandit9  -> bandit10: truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+
+strings data.txt
+
+bandit10  -> bandit11: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+
+
+base64 -d data.txt
+
+bandit11  -> bandit12: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+
+
+bandit12  -> bandit13: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+
+xxd <file> -r  //converts dump into binary
+
+file <file> to identify type
+
+if gzip compressed -> rename to <file>.gz > gzip -d <file>
+if tar archive -> rename to <file>.tar > tar -xvf <file>
+if bzip2 > rename to <file>.bz2 > bzip2 -d <file>
+
+
+
+
+bandit13  -> bandit14: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+
+ssh bandit14@localhost -i sshkey.private
+
+cat /etc/bandit_pass/bandit14
+
+bandit14  -> bandit15: BfMYroe26WYalil77FoDi9qh59eK5xNr
+
+(loggedin as bandit14) cat bandit14 | nc localhost 30000
+
+
+bandit15  -> bandit16: cluFn7wTiGryunymYOu4RcffSxQluehd
+
+-ign_eof -doesnt let the server close the connection when reaching end of file-
+ 
+/etc/bandit_pass$ cat bandit15 | openssl s_client -connect localhost:30001 -ign_eof
+
+
+bandit15  -> bandit16: cluFn7wTiGryunymYOu4RcffSxQluehd
+
+-----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEAvmOkuifmMg6HL2YPIOjon6iWfbp7c3jx34YkYWqUH57SUdyJ
+imZzeyGC0gtZPGujUSxiJSWI/oTqexh+cAMTSMlOJf7+BrJObArnxd9Y7YT2bRPQ
+Ja6Lzb558YW3FZl87ORiO+rW4LCDCNd2lUvLE/GL2GWyuKN0K5iCd5TbtJzEkQTu
+DSt2mcNn4rhAL+JFr56o4T6z8WWAW18BR6yGrMq7Q/kALHYW3OekePQAzL0VUYbW
+JGTi65CxbCnzc/w4+mqQyvmzpWtMAzJTzAzQxNbkR2MBGySxDLrjg0LWN6sK7wNX
+x0YVztz/zbIkPjfkU1jHS+9EbVNj+D1XFOJuaQIDAQABAoIBABagpxpM1aoLWfvD
+KHcj10nqcoBc4oE11aFYQwik7xfW+24pRNuDE6SFthOar69jp5RlLwD1NhPx3iBl
+J9nOM8OJ0VToum43UOS8YxF8WwhXriYGnc1sskbwpXOUDc9uX4+UESzH22P29ovd
+d8WErY0gPxun8pbJLmxkAtWNhpMvfe0050vk9TL5wqbu9AlbssgTcCXkMQnPw9nC
+YNN6DDP2lbcBrvgT9YCNL6C+ZKufD52yOQ9qOkwFTEQpjtF4uNtJom+asvlpmS8A
+vLY9r60wYSvmZhNqBUrj7lyCtXMIu1kkd4w7F77k+DjHoAXyxcUp1DGL51sOmama
++TOWWgECgYEA8JtPxP0GRJ+IQkX262jM3dEIkza8ky5moIwUqYdsx0NxHgRRhORT
+8c8hAuRBb2G82so8vUHk/fur85OEfc9TncnCY2crpoqsghifKLxrLgtT+qDpfZnx
+SatLdt8GfQ85yA7hnWWJ2MxF3NaeSDm75Lsm+tBbAiyc9P2jGRNtMSkCgYEAypHd
+HCctNi/FwjulhttFx/rHYKhLidZDFYeiE/v45bN4yFm8x7R/b0iE7KaszX+Exdvt
+SghaTdcG0Knyw1bpJVyusavPzpaJMjdJ6tcFhVAbAjm7enCIvGCSx+X3l5SiWg0A
+R57hJglezIiVjv3aGwHwvlZvtszK6zV6oXFAu0ECgYAbjo46T4hyP5tJi93V5HDi
+Ttiek7xRVxUl+iU7rWkGAXFpMLFteQEsRr7PJ/lemmEY5eTDAFMLy9FL2m9oQWCg
+R8VdwSk8r9FGLS+9aKcV5PI/WEKlwgXinB3OhYimtiG2Cg5JCqIZFHxD6MjEGOiu
+L8ktHMPvodBwNsSBULpG0QKBgBAplTfC1HOnWiMGOU3KPwYWt0O6CdTkmJOmL8Ni
+blh9elyZ9FsGxsgtRBXRsqXuz7wtsQAgLHxbdLq/ZJQ7YfzOKU4ZxEnabvXnvWkU
+YOdjHdSOoKvDQNWu6ucyLRAWFuISeXw9a/9p7ftpxm0TSgyvmfLF2MIAEwyzRqaM
+77pBAoGAMmjmIJdjp+Ez8duyn3ieo36yrttF5NSsJLAbxFpdlc1gvtGCWW+9Cq0b
+dxviW8+TFVEBl1O4f7HVm6EpTscdDxU+bCXWkfjuRb7Dy9GOtt9JPsX8MBTakzh3
+vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
+-----END RSA PRIVATE KEY-----
+
+
+The solution is an RSA key.
+
+nmap localhost -p 31000-32000
+
+cd /etc/bandit_pass 
+
+cat bandit16 | openssl s_client -connect localhost:31790 -ign_eof
+
+
+
+bandit16  -> bandit17: xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn
+
+cd /tmp | mkdir RSA | cd RSA | VIM RSA 
+
+<paste RSA private key>
+
+ssh bandit17@localhost -i RSA
+
+
+bandit17 -> bandit18: kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+
+diff passwords.new passwords.old
+
+bandit18 -> bandit19: IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+
+
+ssh -t bandit18@bandit.labs.overthewire.org -p 2220 /bin/sh
+
+<-t> removes the welcome messages that closes the connection on login.
+
+bandit19 -> bandit20: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+
+./bandit20-do cat /etc/bandit_pass/bandit20
+
+password is the id ?
+
+
+bandit20 -> bandit21: gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+
+choose any non reserved tcp port ? for the listening server.
+
+ echo "GbKksEFF4yrVs6il55v6gwY5aVje5f0j" | nc localhost -p 50000 -l &
+
+./suconnect 50000
+
+bandit21 -> bandit22: Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
+
+    1  man cron
+    2  man 5 crontab
+    3  ls
+    4  cd /etc/cron.d
+    5  ls
+    6  cat cronjob_bandit22
+    7  cd ..
+    8  cd /usr/bin/
+    9  ls
+   10  ls *cron*
+   11  cat cronjob_bandit22.sh
+   12  cd /tmp
+   13  ls
+   14  cd /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+   15  cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+   16  history
+
+bandit22 -> bandit23: jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
+
+ 2  cd /etc/cron.d
+ 6  cat cronjob_bandit23
+ 8  cd /usr/bin/
+ 12  cat cronjob_bandit23.sh
+ 13  ./cronjob_bandit23.sh
+ 35  cd ~
+ 36  myname=bandoit23
+ 37  echo myname
+ 38  echo $myname
+ 39  myname=bandit23
+ 40  echo $myname
+ 41  mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
+ 42  echo $mytarget
+ 45  cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+
+
+bandit23 -> bandit24: UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+
+cd /tmp
+mkdir 998
+vim scripto.sh
+
+#!/bin/bash
+
+cat /etc/pass_pass/bandit24 > /tmp/998/pswdd
+
+:wq!
+
+chmod 777 .
+chmod +x scripto.sh
+
+cp scripto.sh /var/spool/bandit24
+
+----wait till the cron job runs----
+
+cat pswdd
+
+
+
+bandit23 -> bandit25: uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+
+    7  cd /tmp
+    8  cd 998
+    9  ls
+   10  vim loop.sh
+	
+#!/bin/bash
+
+p=$(cat pswdd)
+
+for i in {0000..9999}
+do
+
+echo "$p $i"
+done | nc localhost 3002
+
+
+bandit25 -> bandit26: 5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+
+   12  man more
+   13  ssh bandit26@localhost -i bandit26.sshkey
+
+resize window to atleast 4 vertical
+get the more prompt
+:v to get into vim
+:e /etc/bandit_password/bandit26 to open file in vim
+:set shell=/bin/bash to set shell variable to bash instead of sh
+:shell to return to shell in bandit26
+
+bandit26 -> bandit27: 3ba3118a22e93127a4ed485be72ef5ea
+
+follow steps of 25 -> 26
+
+then 
+
+./bandit27-do cat /etc/bandit_pass/bandit27
+
+bandit27 -> bandit28: 0ef186ac70e04ea33b4c1853d2526fa2
+
+    6  man git
+    7  man git-clone
+    8  git clone ssh://bandit27-git@localhost/home/bandit27-git/repo text
+    9  ls
+   10  cd /tmp
+   11  cd 998
+   12  ls
+   16  git clone ssh://bandit27-git@localhost/home/bandit27-git/repo text
+   17  ls
+   18  cd text/
+   19  ls
+   20  cat README
+
+bandit28 -> bandit29: bbc96594b4e001778eee9975372716b2
+
+    1  cd /tmp/998
+    5  git clone ssh://bandit28-git@localhost/home/bandit28-git/repo text28
+    6  ls
+    7  cd text28/
+    8  ls
+    9  ls -al
+   10  cat README.md
+   32  git log
+   33  git log -p
+   34  man git-log
+
+
+bandit29 -> bandit30: 5b90576bedb2cc04c86a9e924ce42faf
+
+
+    1  cd /tmp/998
+    2  git clone ssh://bandit29-git@localhost/home/bandit29-git/repo
+    3  ls
+    4  cp repo text29
+    5  cp repo text29 -r
+   12  cd text29
+   13  ls
+   14  cat README.md
+   15  ls -al
+   16  git log -p
+   18  git branch
+   19  git branch -r
+   20  git checkout dev
+   21  git branch
+   22  git log
+   23  git log -p
+
+bandit30 -> bandit31: 47e603bb428404d265f59c42920d81e5
+   
+    1  cd /tmp/998
+    7  man mkdir
+    8  mkdir text30
+    9  git clone ssh://bandit30-git@localhost/home/bandit30-git/repo text30
+   10  cd text30
+   11  ls
+   12  git log -p
+   13  git branch -r
+   14  man git-tag
+   15  git tag
+   16  man git-show
+   17  git show secrect
+   18  git show secret
+
+bandit31 -> bandit32: 56a9bf19c63d650ce78e6ec0354ee45e
+
+cd /tmp/998
+mkdir text32
+cd text32
+cat README.md
+vim key.txt
+May I come in?
+git add key.txt
+git commit -m "any message here"  -- to create a commit the key.txt in the staging area
+git push origin master   --to push the commit to the repo
+
+
+bandit32 -> bandit33: c9c3199ddf4121b10cf581a98d51caee
+
+$0  --- calls shell as to break free of the uppercase shell
+ pwd
+cat /etc/bandit_pass/bandit33
+
+bandit33 -> bandit34: DONE with bandits !!
